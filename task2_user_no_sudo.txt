@@ -1,0 +1,13 @@
+1. Create a new user named "testuser":
+   sudo useradd testuser
+
+2. Set the password for the new user:
+   sudo passwd testuser
+
+3. To ensure the user cannot use sudo, ensure they are not in the sudoers group:
+   sudo deluser testuser sudo
+
+4. Test the user's sudo access by attempting:
+   su - testuser
+   sudo ls
+   (This should show an error that the user is not in the sudoers file)

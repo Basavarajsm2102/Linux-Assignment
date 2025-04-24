@@ -1,0 +1,11 @@
+1. Install the Postfix mail server using the command:
+   sudo apt-get install postfix
+
+2. Configure the SMTP server:
+   - Edit the configuration file `/etc/postfix/main.cf` to set the myhostname, mydomain, and other necessary parameters.
+
+3. Restart Postfix after editing the configuration:
+   sudo systemctl restart postfix
+
+4. Test SMTP configuration by sending a test email to another user:
+   echo "This is a test email" | mail -s "Test Subject" testuser

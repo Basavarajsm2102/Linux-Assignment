@@ -1,0 +1,12 @@
+1. To restrict permissions on new files, configure the umask for the system. The default umask might be set to 0022, allowing users to read and execute files.
+
+2. Set the umask value to 0777 for no permissions on new files:
+   sudo nano /etc/profile
+   Add the line:
+   umask 0777
+
+3. Save and exit. The umask will now apply to new files created.
+4. Test by creating a new file:
+   touch newfile.txt
+   ls -l newfile.txt
+   (Permissions should be restricted, with no access allowed to others)

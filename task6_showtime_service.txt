@@ -1,0 +1,31 @@
+1. Create a shell script to log the current time:
+   nano ~/showtime.sh
+   Add the following:
+   #!/bin/bash
+   while true; do
+     date '+%Y-%m-%d %H:%M:%S' >> /home/projects/showtime.txt
+     sleep 60
+   done
+
+2. Make the script executable:
+   chmod +x ~/showtime.sh
+
+3. Create a systemd service to start and stop the script:
+   sudo nano /etc/systemd/system/showtime.service
+   Add the following content:
+   [Unit]
+   Description=Show Time Every Minute
+   [Service]
+   ExecStart=/home/projects/showtime.sh
+   [Install]
+   WantedBy=multi-user.target
+
+4. Reload systemd and enable the service:
+   sudo systemctl daemon-reload
+   sudo systemctl enable showtime
+   sudo systemctl start showtime
+
+5. To stop the service, run:
+   sudo systemctl stop showtime
+   To check the status:
+   sudo systemctl status showtime

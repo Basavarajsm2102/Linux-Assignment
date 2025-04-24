@@ -1,0 +1,13 @@
+1. Create a new script to list files in the current directory when the command `describe` is executed:
+   sudo nano /usr/local/bin/describe
+
+2. Add the following content to the script:
+   #!/bin/bash
+   ls -l
+
+3. Make the script executable:
+   sudo chmod +x /usr/local/bin/describe
+
+4. Test the script:
+   describe
+   (This should list files in the current directory)

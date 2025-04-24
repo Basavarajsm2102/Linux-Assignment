@@ -1,0 +1,9 @@
+1. To find a file named "research" with any compression type, use the find command:
+   sudo find / -type f -name "research.*" 2>/dev/null
+
+2. Once located, detect the compression type using the file command:
+   file /path/to/research.gz
+
+3. Extract the file based on its compression type:
+   For gzip files, use:
+   gunzip /path/to/research.gz
