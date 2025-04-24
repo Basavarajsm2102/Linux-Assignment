@@ -10,7 +10,7 @@ This repository contains solutions for a set of Linux system configuration tasks
 - Set up a local SMTP service using Postfix to allow sending mail within the local system.
 - Configuration verified by sending and receiving test mails.
 
-➡️ See: `1_configure_smtp.txt`
+➡️ See: `task1_smtp_config.txt`
 
 ---
 
@@ -18,7 +18,7 @@ This repository contains solutions for a set of Linux system configuration tasks
 - A new user was created on the system.
 - This user was explicitly removed from the sudoers list to prevent privilege escalation.
 
-➡️ See: `2_create_user_no_sudo.txt`
+➡️ See: `task2_user_no_sudo.txt`
 
 ---
 
@@ -26,7 +26,7 @@ This repository contains solutions for a set of Linux system configuration tasks
 - A custom command named `describe` was made globally available.
 - When executed, it lists all files and directories in the user's current working directory.
 
-➡️ See: `3_describe_command.txt`
+➡️ See: `task3_custom_command.txt`
 
 ---
 
@@ -34,7 +34,7 @@ This repository contains solutions for a set of Linux system configuration tasks
 - The system searches for any file named `research` with a compression extension (e.g., `.gz`).
 - Detects its type and uncompresses it accordingly.
 
-➡️ See: `4_uncompress_research.txt`
+➡️ See: `task4_compressed_file_search.txt`
 
 ---
 
@@ -42,7 +42,7 @@ This repository contains solutions for a set of Linux system configuration tasks
 - Configured the system so that all files created by any user do not allow read/write/execute permissions for the user.
 - This was achieved using default `umask` settings and ACL (Access Control Lists).
 
-➡️ See: `5_restrict_file_permissions.txt`
+➡️ See: `task5_file_permission_restriction.txt`
 
 ---
 
@@ -51,7 +51,7 @@ This repository contains solutions for a set of Linux system configuration tasks
 - Once started, it writes the current system time every minute to a file in the user’s home directory.
 - Supports `start`, `stop`, and `status` actions.
 
-➡️ See: `6_showtime_service.txt`
+➡️ See: `task6_showtime_service.txt`
 
 ---
 
